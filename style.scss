@@ -1,0 +1,82 @@
+.container {
+  margin-top: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+
+  th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+  }
+}
+
+/* -------------------------------- */
+
+.copy-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    margin-right: 10px;
+    color: rgba(33, 37, 41, 0.75);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  button {
+    padding: 0.45rem 0.75rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #ac3939;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      background-color: #871010;
+    }
+
+    .fa-copy,
+    .fa-check {
+      transition: all 0.4s ease-in-out;
+      position: absolute;
+    }
+
+    .fa-check {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    &.copied .fa-check {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    &.copied .fa-copy {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+}
